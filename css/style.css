@@ -16,6 +16,9 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
+.main-color {
+  color: var(--main-color);
+}
 .tr {
   transition: all 0.6s;
 }
@@ -53,38 +56,81 @@ img {
   color: #fff;
 }
 /* !scroll */
-/* ?start navabar  */
-.navbar{
-  background-color: var(--main-color) !important;
-  .nav-link{
-    color: white ;
-  }
-  .navbar-brand{
-    color: white ;
-  }
-   }
-/* ?end navabar  */
-.ll{
-  display: inline-block;
-  width: 150px;
-  background-color: #ccc;
-  /* background-color: var(--main-color); */
-  color: var(--main-color);
-  /* color: #fff; */
-  border-radius: 20px;
-  margin-left: 20px;
-  padding: 4px 6px;
-}
-.table tr{
-height: 50px;
-background-color: #fff !important ;
-}
-.table th{
-  height: 50px;
-  background-color: var(--main-color) !important ;
+/*  */
+.btn-main {
+  background-color: var(--main-color);
   color: #fff;
-  }
-  .btn-main{
-    background-color: var(--main-color) !important ;
+  padding: 5px 20px;
+  &:hover {
+    background-color: var(--main-color);
+    box-shadow: 0 0 8px var(--main-color);
     color: #fff;
   }
+}
+.btn-outline-main {
+  border-color: var(--main-color);
+  color: var(--main-color);
+  padding: 5px 20px;
+  transition: all 0.5s;
+  &:hover {
+    background-color: var(--main-color);
+    box-shadow: 0 0 8px var(--main-color);
+    color: #fff;
+  }
+}
+/*  */
+header {
+  background-color: #f8f9fa;
+  height: 100vh;
+  overflow-y: auto;
+  .sidebar {
+    .navbar-brand {
+      color: #fff;
+      background-color: var(--main-color);
+      width: 100%;
+      padding: 0.5rem 0;
+      &:hover {
+        color: #fff;
+      }
+    }
+    .active {
+      color: var(--main-color);
+    }
+    .minus {
+      font-size: 6px;
+    }
+    .nav-item {
+      cursor: pointer;
+      .dropdown-item {
+        padding: 0.5rem 0;
+        font-size: 12px;
+        color: black;
+      }
+    }
+  }
+}
+main {
+  .table tr {
+    height: 50px;
+    background-color: #fff;
+  }
+  .table th {
+    height: 50px;
+    background-color: var(--main-color);
+    color: #fff;
+  }
+
+  label {
+    width: 200px;
+    color: var(--main-color);
+  }
+}
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  }
+  .table {
+    min-width: 100%; /*Ensure the table fills the container*/
+  }
+}
